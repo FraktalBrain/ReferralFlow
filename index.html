@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ReferralFlow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- APPLICATION SHELL: Persistent navigation and workspace frame -->
+<div class="app">
+  <!-- SIDEBAR: Primary navigation and new-referral action -->
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">R</span><span>ReferralFlow</span></div>
+    <button class="button primary wide" id="newReferral">＋ New Referral</button>
+    <nav id="navigation" aria-label="Main navigation"></nav>
+    <p class="sidebar-foot">Local workspace<br><strong>Referral Master.xlsx</strong></p>
+  </aside>
+  <!-- WORKSPACE: Utility bar and page content rendered by JavaScript -->
+  <div class="workspace">
+    <header class="topbar">
+      <label class="global-search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="Search referrals, patients, IDs…" aria-label="Global search"></label>
+      <div class="workbook"><span class="dot"></span><span>Referral Master.xlsx</span><small id="saveState">All changes saved</small></div>
+      <button class="button" id="saveButton">Save</button><span class="avatar" title="Office user">OF</span>
+    </header>
+    <main id="main"></main>
+  </div>
+</div>
+<!-- REFERRAL DRAWER: Reusable overlay populated from fictional data -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-hidden="true" aria-label="Referral details"></aside>
+<!-- NOTIFICATIONS: Accessible save, action, and undo feedback -->
+<div class="toast-region" id="toasts" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
